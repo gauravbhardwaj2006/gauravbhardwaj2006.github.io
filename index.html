@@ -155,6 +155,96 @@
     .coral-bg { background-color: lightcoral; }
     .teal-bg { background-color: lightseagreen; }
     .testimonial-bg { background-color: darkorange; }
+    :root{
+      --card-bg: #ffffff;
+      --accent: #004080;
+      --muted: #666666;
+      --border: #e0e6ef;
+      --radius: 10px;
+    }
+
+    body{
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      margin: 20px;
+    }
+
+    .principal-wrapper{
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap; /* so they stack on smaller screens */
+      justify-content: center;
+    }
+
+    .principal-card {
+      display: flex;
+      gap: 15px;
+      align-items: stretch;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 6px 18px rgba(14,30,37,0.06);
+      padding: 15px;
+      width: 420px;   /* fixed width for side-by-side */
+      max-width: 100%;
+    }
+
+    .principal-photo {
+      flex: 0 0 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .principal-photo img{
+      width: 110px;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 3px solid var(--accent);
+    }
+
+    .principal-content{
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .principal-content h3{
+      margin: 0;
+      font-size: 18px;
+      color: var(--accent);
+    }
+
+    .principal-content p{
+      margin: 5px 0;
+      font-size: 14px;
+      line-height: 1.4;
+      color: #222;
+    }
+
+    .signature{
+      margin-top: 6px;
+    }
+
+    .signature .name{
+      font-weight: bold;
+      color: #111;
+    }
+
+    .signature .role{
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* Responsive: stack vertically */
+    @media (max-width: 900px){
+      .principal-wrapper{
+        flex-direction: column;
+        align-items: center;
+      }
+    }
 
   </style>
 </head>
@@ -184,6 +274,47 @@
 
   <!-- School Name -->
   <p class="school-title"><ins>S.N VYAS PUBLIC SCHOOL</ins></p>
+  <h2 style="text-align:center; color:#004080;">Our Principals</h2>
+
+  <div class="principal-wrapper">
+
+    <!-- Principal 1 -->
+    <div class="principal-card">
+      <div class="principal-photo">
+        <img src="/images/BP.jpg" alt="Principal 1">
+      </div>
+      <div class="principal-content">
+        <h3>Principal's Message</h3>
+        <p>
+          With dedication and vision, I believe education must build strong values
+          and nurture curiosity in every student.
+        </p>
+        <div class="signature">
+          <div class="name">Mr. [Yatinder Bhardwaj]</div>
+          <div class="role">Principal</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Principal 2 -->
+    <div class="principal-card">
+      <div class="principal-photo">
+        <img src="/images/BM.jpg" alt="Principal 2">
+      </div>
+      <div class="principal-content">
+        <h3>Principal's Message</h3>
+        <p>
+          I believe in nurturing compassion, discipline, and excellence,
+          empowering every child to reach their full potential.
+        </p>
+        <div class="signature">
+          <div class="name">Mrs. [Sunita Bhardwaj]</div>
+          <div class="role">Principal</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
 
   <!-- Slideshow -->
   <div class="slideshow">
@@ -252,6 +383,7 @@
 
 </body>
 </html>
+
 
 
 
